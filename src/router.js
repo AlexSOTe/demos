@@ -21,7 +21,6 @@ let router = new Router({
 });
 router.beforeEach((to, from, next) => {
   Vue.prototype.$pageQuery = {};
-  console.log(router.beforeEach);
   next();
 });
 export default router;

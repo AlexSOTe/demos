@@ -1,20 +1,14 @@
 <template>
   <div class="ChinaFlag">
-    <van-steps :active="1"
-               active-icon="success"
-               active-color="#38f">
-      <van-step>买家下单</van-step>
-      <van-step>商家接单</van-step>
-      <van-step>买家提货</van-step>
-    </van-steps>
     <h2 class="title">给头像加国旗</h2>
     <div class="fileInput">
-      1.<label for="file">选择图片</label>
+      <span class="step">①</span>
+      <label for="file">选择图片</label>
       <input id="file" type="file" name="name" @change="FileChange" />
     </div>
     <hr />
     <div class="frames">
-      2.
+      <span class="step">②</span>
       <div v-for="x in frameTypes"
            :key="x.id"
            @click="Change(x)">
@@ -25,7 +19,10 @@
     <hr />
     <canvas ref="canvas" width="300" height="300"></canvas>
     <hr />
-    <div>3. <van-button type="info" @click="Download">Download</van-button></div>
+    <div>
+      <span class="step">③</span>
+      <van-button type="info" @click="Download">Download</van-button>
+    </div>
   </div>
 </template>
 
@@ -95,7 +92,7 @@
       }
       let a = document.createElement('a');
       a.download = 'Avatar_with_China_flag';
-      a.setAttribute('href', canvas.toDataURL('image/png'));
+      a.setAttribute('href', this.canvas.toDataURL('image/png'));
       a.click();
     }
 
@@ -138,6 +135,11 @@
   .title {
     color: red;
     text-align: center;
+  }
+
+  .step {
+    color: red;
+    font-size: 30px;
   }
 
   .frames {
