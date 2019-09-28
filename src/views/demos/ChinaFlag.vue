@@ -62,6 +62,7 @@
       }
     }
     Change(x) {
+      console.log(this.files[0]);
       if (this.files[0]) {
         if (x) {
           this.frameType = x.type;

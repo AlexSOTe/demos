@@ -1,7 +1,7 @@
 <template>
   <div class="Menu">
     <van-sticky>
-      <van-nav-bar :title="navTitle"
+      <van-nav-bar :title="'Demos'"
                    left-text="首页"
                    @click-left="$router.push({name:'home'})"
                    right-text="菜单"
