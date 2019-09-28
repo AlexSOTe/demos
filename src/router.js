@@ -27,7 +27,8 @@ let router = new Router({
   ]
 });
 router.beforeEach((to, from, next) => {
-  Vue.prototype.$pageQuery = {};
+  Vue.prototype.$pageMeta = to.meta;
+  document.title = to.meta.title;
   store.commit('SetNavTitle', to.meta.title);
   next();
 });

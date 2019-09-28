@@ -5,7 +5,9 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    navTitle: '首页'
+    app: {
+      navTitle: '首页'
+    }
   },
   mutations: {
     SetNavTitle(state, data) {
@@ -15,6 +17,11 @@ export default new Vuex.Store({
   actions: {
     SetNavTitle(context) {
       context.commit('SetNavTitle');
+    }
+  },
+  getters: {
+    app(state) {
+      return state.app;
     }
   }
 });

@@ -3,7 +3,7 @@
     <van-sticky>
       <van-nav-bar :title="navTitle"
                    left-text="首页"
-                   @click-left=""
+                   @click-left="$router.push({name:'home'})"
                    right-text="菜单"
                    @click-right="show = true">
       </van-nav-bar>
@@ -23,7 +23,6 @@
 <script>
   import Vue from 'vue';
   import { Component, Watch } from 'vue-property-decorator';
-  import store from '../store/store.js';
 
   @Component({
     name: 'Menu'
@@ -40,8 +39,11 @@
     }
 
     get navTitle() {
-      console.log(store.state.navTitle);
-      return store.state.navTitle;
+      console.log(this.$store.getters.app.navTitle);
+      return this.$store.getters.app.navTitle;
+    }
+
+    mounted() {
     }
   }
 </script>

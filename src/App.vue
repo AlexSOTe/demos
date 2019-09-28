@@ -14,10 +14,9 @@
       Menu
     }
   })
-  class App extends Vue {
+  export default class App extends Vue {
     name = 'App';
   }
-  export default App;
 </script>
 <style lang="scss">
 

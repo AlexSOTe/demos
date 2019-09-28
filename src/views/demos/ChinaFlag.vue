@@ -29,8 +29,6 @@
 <script>
   import Vue from 'vue';
   import { Component } from 'vue-property-decorator';
-  import China1 from '../../assets/ChinaFlag/China1.png';
-  import China2 from '../../assets/ChinaFlag/China2.png';
 
   @Component({
     name: 'ChinaFlag'
@@ -39,8 +37,8 @@
     frameType = '1';
     files = [];
     frameTypes = [
-      { id: '1', type: '1', url: China1 },
-      { id: '2', type: '2', url: China2 },
+      { id: '1', type: '1', url: require('../../assets/ChinaFlag/China1.png') },
+      { id: '2', type: '2', url: require('../../assets/ChinaFlag/China2.png') },
     ];
     canvas = null;
     ctx = null;
@@ -107,7 +105,6 @@
       this.ctx = this.canvas.getContext('2d');
     }
     mounted() {
-      console.log('$refs', this.$refs);
       this.Init();
     }
   }
