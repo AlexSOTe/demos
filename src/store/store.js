@@ -6,18 +6,18 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     app: {
-      navTitle: '首页'
+      navTitle: '首页',
     }
   },
   mutations: {
     SetNavTitle(state, data) {
-      state.navTitle = data.pageTitle;
-    }
+      state.app.navTitle = data.pageTitle;
+    },
   },
   actions: {
     SetNavTitle(context) {
       context.commit('SetNavTitle');
-    }
+    },
   },
   getters: {
     app(state) {

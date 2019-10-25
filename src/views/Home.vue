@@ -3,8 +3,9 @@
     <van-list class="menuList">
       <van-cell v-for="x in list"
                 :key="x.id"
-                class="menuListItem">
-        <router-link class="itemText" :to="x.routeName">{{x.text}}</router-link>
+                class="menuListItem"
+                @click="GotoDemos(x)">
+        <button class="navButton">{{x.text}}</button>
       </van-cell>
     </van-list>
   </div>
@@ -22,8 +23,11 @@
     list = [
       { id: '0', routeName: 'chinaflag', text: '给头像添加国旗' },
       { id: '1', routeName: 'cube', text: '旋转的立方体' },
+      { id: '2', routeName: 'threejs', text: 'ThreeJS' },
     ];
-    components = {
+
+    GotoDemos(x) {
+      this.$router.push({ name: x.routeName });
     }
   }
 </script>
@@ -38,7 +42,7 @@
     padding: 0 10px;
   }
 
-  .itemText {
+  .menuList .menuListItem .navButton {
     color: #1989fa;
   }
 </style>

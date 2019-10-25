@@ -31,6 +31,14 @@ let router = new Router({
         title: '立方体'
       },
       component: () => import('./views/demos/CubeDemo.vue')
+    },
+    {
+      path: '/threejs',
+      name: 'threejs',
+      meta: {
+        title: 'ThreeJS'
+      },
+      component: () => import('./views/demos/ThreeJS.vue')
     }
   ]
 });

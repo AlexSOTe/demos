@@ -9,7 +9,7 @@
 <script>
   import Vue from 'vue';
   import { Component } from 'vue-property-decorator';
-  import Menu from '@/components/Menu';
+  import Menu from './components/Menu.vue';
 
   @Component({
     components: {
@@ -18,6 +18,8 @@
   })
   export default class App extends Vue {
     name = 'App';
+    mounted() {
+    }
   }
 </script>
 <style lang="scss">
