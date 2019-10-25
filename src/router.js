@@ -23,6 +23,14 @@ let router = new Router({
         title: '给头像添加国旗'
       },
       component: () => import('./views/demos/ChinaFlag.vue')
+    },
+    {
+      path: '/cube',
+      name: 'cube',
+      meta: {
+        title: '立方体'
+      },
+      component: () => import('./views/demos/CubeDemo.vue')
     }
   ]
 });

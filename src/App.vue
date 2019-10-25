@@ -1,6 +1,8 @@
 <template>
-  <div id="app">
-    <Menu />
+  <div id="app" class="app">
+    <div class="menu">
+      <Menu />
+    </div>
     <router-view />
   </div>
 </template>
@@ -19,10 +21,13 @@
   }
 </script>
 <style lang="scss">
-
-  html, body {
+  html, body, .app {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100vw;
+    height: 100vh;
   }
 
   button {
@@ -32,10 +37,16 @@
     background-color: transparent;
   }
 
-  #app {
+  .app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex1 {
+    flex: 1;
   }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="ChinaFlag">
+  <div class="ChinaFlag flex1">
     <h2 class="title">给头像加国旗</h2>
     <div class="fileInput">
       <span class="step">①</span>
