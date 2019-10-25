@@ -51,7 +51,7 @@
     }
     InitCube() {
       let cubeGeometry = new this.$3.CubeGeometry(50, 50, 50, 50, 50, 50)
-      let cubeMaterial = new this.$3.MeshBasicMaterial({
+      let cubeMaterial = new this.$3.MeshLambertMaterial({
         color: 0xff0000
       })
       this.cube = new this.$3.Mesh(cubeGeometry, cubeMaterial);
