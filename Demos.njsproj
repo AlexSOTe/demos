@@ -36,6 +36,7 @@
     <Folder Include="src\assets\ChinaFlag\" />
     <Folder Include="src\components\" />
     <Folder Include="src\mixins\" />
+    <Folder Include="src\js\" />
     <Folder Include="src\store\" />
     <Folder Include="src\views\" />
     <Folder Include="src\views\demos\" />
@@ -72,6 +73,7 @@
     <Content Include="src\assets\ChinaFlag\China2.png" />
     <Content Include="src\assets\logo.png" />
     <Content Include="src\components\Menu.vue" />
+    <Content Include="src\js\threejsDemo.js" />
     <Content Include="src\main.js" />
     <Content Include="src\registerServiceWorker.js" />
     <Content Include="src\router.js" />
