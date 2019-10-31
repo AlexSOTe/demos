@@ -37,6 +37,7 @@
     <Folder Include="src\components\" />
     <Folder Include="src\mixins\" />
     <Folder Include="src\js\" />
+    <Folder Include="src\models\" />
     <Folder Include="src\store\" />
     <Folder Include="src\views\" />
     <Folder Include="src\views\demos\" />
@@ -75,6 +76,7 @@
     <Content Include="src\components\Menu.vue" />
     <Content Include="src\js\threejsDemo.js" />
     <Content Include="src\main.js" />
+    <Content Include="src\models\Bee.fbx" />
     <Content Include="src\registerServiceWorker.js" />
     <Content Include="src\router.js" />
     <Content Include="src\store\store.js" />
@@ -83,6 +85,7 @@
     <Content Include="src\views\demos\ThreeJS.vue" />
     <Content Include="src\views\Home.vue" />
     <Content Include="tsconfig.json" />
+    <Content Include="vue.config.js" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
 </Project>
