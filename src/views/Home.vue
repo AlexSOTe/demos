@@ -23,6 +23,7 @@
       { id: '0', routeName: 'chinaflag', text: '给头像添加国旗' },
       { id: '1', routeName: 'cube', text: '旋转的立方体' },
       { id: '2', routeName: 'threejs', text: 'ThreeJS' },
+      { id: '3', routeName: 'bezier', text: '贝塞尔曲线' },
     ];
 
     GotoDemos(x) {

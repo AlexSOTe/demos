@@ -39,6 +39,14 @@ let router = new Router({
         title: 'ThreeJS'
       },
       component: () => import('./views/demos/ThreeJS.vue')
+    },
+    {
+      path: '/bezier',
+      name: 'bezier',
+      meta: {
+        title: '贝塞尔曲线'
+      },
+      component: () => import('./views/demos/Bezier.vue')
     }
   ]
 });

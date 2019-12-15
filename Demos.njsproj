@@ -73,7 +73,7 @@
     <Content Include="src\assets\ChinaFlag\China1.png" />
     <Content Include="src\assets\ChinaFlag\China2.png" />
     <Content Include="src\assets\logo.png" />
-    <Content Include="src\components\Menu.vue" />
+    <Content Include="src\js\bezier.js" />
     <Content Include="src\js\threejsDemo.js" />
     <Content Include="src\main.js" />
     <Content Include="src\models\Bee.fbx" />
@@ -81,10 +81,10 @@
     <Content Include="src\router.js" />
     <Content Include="src\store\store.js" />
     <Content Include="src\views\demos\ChinaFlag.vue" />
+    <Content Include="src\views\demos\Bezier.vue" />
     <Content Include="src\views\demos\CubeDemo.vue" />
     <Content Include="src\views\demos\ThreeJS.vue" />
     <Content Include="src\views\Home.vue" />
-    <Content Include="tsconfig.json" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
 </Project>
