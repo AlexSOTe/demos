@@ -85,7 +85,6 @@
     <Content Include="src\views\demos\ThreeJS.vue" />
     <Content Include="src\views\Home.vue" />
     <Content Include="tsconfig.json" />
-    <Content Include="vue.config.js" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
 </Project>

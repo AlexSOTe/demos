@@ -4,16 +4,15 @@ import store from '@/store/store';
 export default function ThreeDemo(el) {
   let scene = null;
   let camera = null;
-  let renderer = null;
-  let ctnr = el;
+  let renderer = new THREE.WebGLRenderer({ antialias: true });
   let ctnrW = 0;
   let ctnrH = 0;
-  let light = null;
+  let light = new THREE.DirectionalLight(0xffffff, 1.5);
   let cube = null;
 
   function InitCtnr() {
-    ctnrW = parseInt(getComputedStyle(ctnr).width);
-    ctnrH = parseInt(getComputedStyle(ctnr).height);
+    ctnrW = parseInt(getComputedStyle(el).width);
+    ctnrH = parseInt(getComputedStyle(el).height);
   }
   function InitScene() {
     scene = new THREE.Scene();
@@ -21,11 +20,10 @@ export default function ThreeDemo(el) {
     scene.background = new THREE.Color(0x1e1e1e);
   }
   function InitRenderer() {
-    renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(ctnrW, ctnrH);
     renderer.domElement.style.display = 'block';
-    ctnr.appendChild(renderer.domElement);
+    el.appendChild(renderer.domElement);
   }
   function InitCamera() {
     camera = new THREE.PerspectiveCamera(103, ctnrW / ctnrH, 0.1, 2000);
@@ -34,7 +32,6 @@ export default function ThreeDemo(el) {
     scene.add(camera);
   }
   function InitLight() {
-    light = new THREE.DirectionalLight(0xffffff, 1.5);
     light.position.set(500, 500, 500);
     scene.add(light);
   }
