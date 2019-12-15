@@ -1,4 +1,4 @@
-
+let animateTimer = 0;
 class CreateBezier {
   constructor(canvas, points) {
     this.canvas = canvas;
@@ -10,7 +10,6 @@ class CreateBezier {
   Draw() {
     const { c } = this;
     c.clearRect(0, 0, canvas.width, canvas.height);
-    console.log(1);
     this.DrawLine(c);
     this.DrawPoints(c);
   }
@@ -38,6 +37,7 @@ class CreateBezier {
     c.closePath();
   }
   Animation() {
+    console.log('贝塞尔动画中');
     const { c } = this;
     c.clearRect(0, 0, canvas.width, canvas.height);
     if (this.pointsArr[1].x >= 350) {
@@ -51,9 +51,12 @@ class CreateBezier {
       this.pointsArr[2].y += 0.5;
     }
     this.Draw();
-    requestAnimationFrame(() => {
+    animateTimer = requestAnimationFrame(() => {
       this.Animation();
     });
+  }
+  BezierTimerDestory() {
+    cancelAnimationFrame(animateTimer);
   }
 }
 export default CreateBezier;

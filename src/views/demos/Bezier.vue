@@ -11,15 +11,18 @@
   import { Vue, Component } from 'vue-property-decorator';
   import CreateBezier from '../../js/bezier';
 
+  let bezier = null;
   @Component({
     name: 'Bezier'
   })
   export default class Bezier extends Vue {
     mounted() {
-      new CreateBezier(
-        document.querySelector('#canvas'),
-        '0,0 200,10 200,200 120,370'
-      )
+      let canvas = document.querySelector('#canvas');
+      let points = '0,0 200,10 200,200 120,370';
+      bezier = new CreateBezier(canvas, points);
+    }
+    beforeDestroy() {
+      bezier.BezierTimerDestory();
     }
   }
 </script>
