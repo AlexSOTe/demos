@@ -24,6 +24,7 @@
       { id: '1', routeName: 'cube', text: '旋转的立方体' },
       { id: '2', routeName: 'threejs', text: 'ThreeJS' },
       { id: '3', routeName: 'bezier', text: '贝塞尔曲线' },
+      { id: '4', routeName: 'music', text: '音乐文件' },
     ];
 
     GotoDemos(x) {

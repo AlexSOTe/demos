@@ -80,6 +80,7 @@
     <Content Include="src\registerServiceWorker.js" />
     <Content Include="src\router.js" />
     <Content Include="src\store\store.js" />
+    <Content Include="src\views\demos\Music.vue" />
     <Content Include="src\views\demos\ChinaFlag.vue" />
     <Content Include="src\views\demos\Bezier.vue" />
     <Content Include="src\views\demos\CubeDemo.vue" />
