@@ -1,42 +1,26 @@
 <template>
-  <div class="Bezier flex1" ref="ctnr">
-    <canvas id="canvas"
-            ref="canvas"
-            width="375"
-            height="375"></canvas>
+  <div class="Music flex1" ref="ctnr">
+    123
   </div>
 </template>
 
 <script>
   import { Vue, Component } from 'vue-property-decorator';
-  import CreateBezier from '../../js/bezier';
 
-  let bezier = null;
   @Component({
-    name: 'Bezier'
+    name: 'Music'
   })
-  export default class Bezier extends Vue {
+  class Music extends Vue {
     mounted() {
-      let canvas = document.querySelector('#canvas');
-      let points = '0,0 200,10 200,200 120,370';
-      bezier = new CreateBezier(canvas, points);
     }
     beforeDestroy() {
-      bezier.BezierTimerDestory();
     }
   }
+  export default Music
 </script>
 <style scoped>
-  .Bezier {
+  .Music {
     position: relative;
     width: 100%;
-  }
-
-  .Bezier > canvas {
-    margin: 0 auto;
-    display: block;
-    width: 375px;
-    height: 375px;
-    outline: 1px solid #ddd;
   }
 </style>

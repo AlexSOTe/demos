@@ -28,6 +28,7 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="static\" />
     <Folder Include="public\" />
     <Folder Include="public\img\" />
     <Folder Include="public\img\icons\" />
@@ -86,6 +87,7 @@
     <Content Include="src\views\demos\CubeDemo.vue" />
     <Content Include="src\views\demos\ThreeJS.vue" />
     <Content Include="src\views\Home.vue" />
+    <Content Include="static\Brad Paisley-FIND YOURSELF.mp3" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
 </Project>

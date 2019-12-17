@@ -10,7 +10,7 @@
   @Component({
     name: 'ThreeJS'
   })
-  export default class ThreeJS extends Vue {
+  class ThreeJS extends Vue {
     mounted() {
       ThreeDemo(this.$refs.container)
     }
@@ -18,6 +18,7 @@
       this.$store.commit('CancelAnimation');
     }
   }
+  export default ThreeJS
 </script>
 <style scoped>
   .ThreeJS canvas {
