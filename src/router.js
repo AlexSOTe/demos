@@ -47,6 +47,14 @@ let router = new Router({
         title: '贝塞尔曲线'
       },
       component: () => import('./views/demos/Bezier.vue')
+    },
+    {
+      path: '/music',
+      name: 'music',
+      meta: {
+        title: '音乐文件'
+      },
+      component: () => import('./views/demos/Music.vue')
     }
   ]
 });
